@@ -1,0 +1,17 @@
+<h1>Contact</h1>
+
+<p id="notice"><%= notice %></p>
+
+<%= form_tag(to_send_members_path, method: "post") do %>
+
+  <%= label_tag(:name, "Nom") %>
+  <%= text_field_tag(:name) %>
+
+  <%= label_tag(:email, "Email") %>
+  <%= text_field_tag(:email) %>
+
+  <%= label_tag(:content, "Message") %>
+  <%= text_area_tag(:content) %>
+  <br/>
+  <%= submit_tag("Envoyer") %>
+<% end %>
